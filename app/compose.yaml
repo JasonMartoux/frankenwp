@@ -3,7 +3,7 @@ services:
     build: .
     restart: always
     ports:
-      - "8099:80" # HTTP
+      - "8100:80" # HTTP
     environment:
       SERVER_NAME: ${SERVER_NAME:-:80}
       WORDPRESS_DB_HOST: ${DB_HOST:-db}
@@ -24,8 +24,8 @@ services:
         auto_https disable_redirects
         debug
       WORDPRESS_CONFIG_EXTRA: |
-          define('WP_SITEURL', '${SERVER_NAME}');
-          define('WP_HOME', '${SERVER_NAME}');
+          define('WP_SITEURL', 'http://lion.mrtx.tech');
+          define('WP_HOME', 'http://lion.mrtx.tech);
     #volumes:
     # - ./test.php:/var/www/html/test.php
     #  - ./wp-content:/var/www/html/wp-content
