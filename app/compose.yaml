@@ -24,8 +24,8 @@ services:
         auto_https disable_redirects
         debug
       WORDPRESS_CONFIG_EXTRA: |
-          define('WP_SITEURL', 'http://lion.mrtx.tech');
-          define('WP_HOME', 'http://lion.mrtx.tech);
+          define('WP_SITEURL', 'http://lion.mrtx.tech:8100');
+          define('WP_HOME', 'http://lion.mrtx.tech:8100);
     #volumes:
     # - ./test.php:/var/www/html/test.php
     #  - ./wp-content:/var/www/html/wp-content
