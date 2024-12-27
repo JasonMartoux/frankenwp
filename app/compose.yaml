@@ -3,7 +3,7 @@ services:
     build: .
     restart: always
     ports:
-      - "8099:80" # HTTP
+      - "80:80" # HTTP
     environment:
       SERVER_NAME: ${SERVER_NAME:-:80}
       WORDPRESS_DB_HOST: ${DB_HOST:-db}
